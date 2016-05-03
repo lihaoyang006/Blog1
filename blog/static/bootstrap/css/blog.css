@@ -1,0 +1,17 @@
+.blog-content-font{
+	font-size: 20px;
+}
+
+a.blog-title{
+	text-decoration: none;
+}
+
+
+div.blog-main{
+	background: #F5F5F5;
+	margin: 25px 15% 25px 15%;
+	padding: 5px 10px 5px 10px;
+	/*border: solid 1px;*/
+	min-height: 600px;
+	overflow: hidden;
+}
