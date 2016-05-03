@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/blog.css">
+<div class="blog-main">
+	{% if blogs %}
+		{% for blog in blogs %}
+			<h3><a class="blog-title" href="/blog/show/{{blog.id}}">{{blog.title}}</a></h3>
+			<p>{{blog.content}}</p>
+		{% endfor %}
+	{% endif %}
+
+	{% if blog %}
+		<h1>{{blog.title}}</h1>
+		<hr>
+		<span class="blog-content-font">{{blog.content}}</span>
+		<hr>
+		<button class="btn btn-primary back-btn">返回</button>
+	{% endif %}
+</div>
+{% endblock %}
+{% block script %}
+<script>
+	$(document).ready(function(){
+		$(".back-btn").click(function(){
+			history.go(-1);
+		});
+	});
+</script>
+{% endblock %}
